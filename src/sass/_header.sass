@@ -1,0 +1,117 @@
+.slider-top-wr
+  min-height: 100vh
+  background-color: #FF3CAC
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
+  position: relative
+  .slick-dotted.slick-slider
+    margin-bottom: 0
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    background-color: #000
+    opacity: 0.5
+    z-index: -1
+
+.slider-top
+  overflow: hidden
+  min-height: 100vh
+  .slick-next, .slick-prev
+    +r(550)
+      display: none !important
+  .slick-next:before, .slick-prev:before
+    font-size: 0
+  .slick-dots
+    bottom: 40px
+  .slick-dots li.slick-active button:before
+    color: #e70368
+    opacity: 100
+  .slick-dots li button:before
+    color: #3db0ff
+    opacity: 100
+  .slick-prev
+    left: 50px
+    background-image: url("../img/left-arrow.png")
+    width: 32px
+    height: 60px
+    z-index: 300
+    &:hover
+      left: 50px
+      background-image: url("../img/left-arrow.png")
+      width: 32px
+      height: 60px
+      z-index: 300
+  .slick-next
+    right: 50px
+    background-image: url("../img/right-arrow.png")
+    width: 32px
+    height: 60px
+    z-index: 20
+    &:hover
+      right: 50px
+      background-image: url("../img/right-arrow.png")
+      width: 32px
+      height: 60px
+      z-index: 20
+  &__item
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh !important
+    position: relative
+    z-index: -1
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100vh
+      background-color: #000
+      opacity: 0.5
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100vh
+      background-color: #FF3CAC
+      background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
+      opacity: 0.7
+    .desc
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100vh
+      z-index: 20
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .big
+        font-family: 'Roboto Bold',sans-serif
+        font-size: 50px
+        color: #fff
+        font-weight: 600
+        +r(700)
+          font-size: 31px
+      .small
+        font-family: 'Roboto Light',sans-serif
+        font-size: 21px
+        color: #fff
+        padding-bottom: 20px
+        +r(700)
+          font-size: 16px
+      a
+        color: #fff
+        border: 1px solid #fff
+        border-radius: 20px
+        padding: 8px 50px
+        +r(700)
+          padding: 8px 30px
+          font-size: 12px
